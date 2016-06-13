@@ -1,3 +1,7 @@
+//The sum of all the natural numbers below a given n
+//that are multiples of 3 or 5
+
+
 $(document).ready(function() {
 	$("input").click(function () {
 		$("input").attr("value", "");
@@ -8,13 +12,14 @@ $(document).ready(function() {
 		sumOfMulitplesOfThreeOrFive(input);
 	});
 
-
+//Finds the sum of all the multiples of 3 or 5 below a given n
 	var sumOfMulitplesOfThreeOrFive = function(number) {
 		if (number === '') {
 			var blankMessage = "";
 			var outputElement = $("#output");
 			outputElement.html(blankMessage);
 		} else {
+			//Not the best use of parseInt
 			var number = parseInt(number);
 			if (number > 0) {
 				var sum = 0;
